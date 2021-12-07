@@ -1,0 +1,270 @@
+<!doctype html>
+
+<html lang="en">
+
+<head>
+  <title>Title</title>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <link href="../assets/bootstrap-5.0.2-dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="manage_page.css">
+  <script src="manage_page.js"></script>
+</head>
+
+<body>
+
+  <header class="navbar navbar-dark sticky-top bg-dark flex-md-nowrap p-0 shadow">
+    <a class="navbar-brand col-md-3 col-lg-2 me-0 px-3" href="#">Management</a>
+    <button class="navbar-toggler position-absolute d-md-none collapsed" type="button" data-bs-toggle="collapse"
+      data-bs-target="#sidebarMenu" aria-controls="sidebarMenu" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <input class="form-control form-control-dark w-100" type="text" placeholder="Search" aria-label="Search">
+    <div class="navbar-nav col-md-3 col-lg-2">
+      <div class="nav-item text-nowrap ">
+        <a class="nav-link px-3 sign_out_in_button" href="#">Sign out</a>
+      </div>
+    </div>
+  </header>
+
+
+  <div class="container-fluid h-100 wrapper">
+    <div class="row">
+      <!-- Left side-->
+      <div class="col-md-3 col-lg-2 vh-100 border-end">
+        <div class="position-sticky  left_menu">
+          <div class="d-flex text-muted pt-3">
+            <svg class="bd-placeholder-img flex-shrink-0 me-2 rounded" width="32" height="32"
+              xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 32x32"
+              preserveAspectRatio="xMidYMid slice" focusable="false">
+              <title>Placeholder</title>
+              <rect width="100%" height="100%" fill="#e83e8c" /><text x="50%" y="50%" fill="#e83e8c"
+                dy=".3em">32x32</text>
+            </svg>
+            <p class="pb-3 mb-0 small lh-sm border-bottom">
+              <strong class="d-block text-gray-dark">First House</strong>
+              Brief Introduction
+            </p>
+          </div>
+          <div class="d-flex text-muted pt-3">
+            <svg class="bd-placeholder-img flex-shrink-0 me-2 rounded" width="32" height="32"
+              xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 32x32"
+              preserveAspectRatio="xMidYMid slice" focusable="false">
+              <title>Placeholder</title>
+              <rect width="100%" height="100%" fill="#e83e8c" /><text x="50%" y="50%" fill="#e83e8c"
+                dy=".3em">32x32</text>
+            </svg>
+            <p class="pb-3 mb-0 small lh-sm border-bottom">
+              <strong class="d-block text-gray-dark">Second House</strong>
+              Brief Introduction
+            </p>
+          </div>
+          <div class="d-flex text-muted pt-3">
+            <svg class="bd-placeholder-img flex-shrink-0 me-2 rounded" width="32" height="32"
+              xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 32x32"
+              preserveAspectRatio="xMidYMid slice" focusable="false">
+              <title>Placeholder</title>
+              <rect width="100%" height="100%" fill="#e83e8c" /><text x="50%" y="50%" fill="#e83e8c"
+                dy=".3em">32x32</text>
+            </svg>
+            <p class="pb-3 mb-0 small lh-sm border-bottom">
+              <strong class="d-block text-gray-dark">Third House</strong>
+              Brief Introduction
+            </p>
+          </div>
+        </div>
+      </div> <!-- Left side-->
+
+      <!-- Midle side-->
+      <div class="col-md-5 col-lg-5 border-end vh-100">
+        <div class="midle_base_info">
+          <form class="needs-validation" novalidate>
+            <div class="row g-3">
+              <div class="col-sm-6">
+                <label for="firstName" class="form-label">First name</label>
+                <input type="text" class="form-control" id="firstName" placeholder="" value="" required>
+                <div class="invalid-feedback">
+                  Valid first name is required.
+                </div>
+              </div>
+
+              <div class="col-sm-6">
+                <label for="lastName" class="form-label">Last name</label>
+                <input type="text" class="form-control" id="lastName" placeholder="" value="" required>
+                <div class="invalid-feedback">
+                  Valid last name is required.
+                </div>
+              </div>
+
+              <div class="col-12">
+                <label for="phone" class="form-label">Phone <span class="text-muted">(Optional)</span></label>
+                <input type="text" class="form-control" id="phone_input" placeholder="097xxxxxxxx">
+                <div class="invalid-feedback">
+                  Please enter a valid phone address for shipping updates.
+                </div>
+              </div>
+
+              <div class="col-12">
+                <label for="email" class="form-label">Email <span class="text-muted">(Optional)</span></label>
+                <input type="email" class="form-control" id="email" placeholder="you@example.com">
+                <div class="invalid-feedback">
+                  Please enter a valid email address for shipping updates.
+                </div>
+              </div>
+
+              <div class="col-12">
+                <label for="address" class="form-label">Address<span class="text-muted">(Optional)</span></label>
+                <input type="text" class="form-control" id="address" placeholder="1234 Main St" required>
+                <div class="invalid-feedback">
+                  Please enter your shipping address.
+                </div>
+              </div>
+
+              <div class="col-md-5">
+                <label for="country" class="form-label">Country<span class="text-muted">(Optional)</span></label>
+                <select class="form-select" id="country" required>
+                  <option value="">Choose...</option>
+                  <option>United States</option>
+                </select>
+                <div class="invalid-feedback">
+                  Please select a valid country.
+                </div>
+              </div>
+
+              <div class="col-md-4">
+                <label for="state" class="form-label">State<span class="text-muted">(Optional)</span></label>
+                <select class="form-select" id="state" required>
+                  <option value="">Choose...</option>
+                  <option>California</option>
+                </select>
+                <div class="invalid-feedback">
+                  Please provide a valid state.
+                </div>
+              </div>
+
+              <div class="col-md-3">
+                <label for="zip" class="form-label">Zip<span class="text-muted">(Optional)</span></label>
+                <input type="text" class="form-control" id="zip" placeholder="" required>
+                <div class="invalid-feedback">
+                  Zip code required.
+                </div>
+              </div>
+            </div>
+
+            <div class="row initial_cost_div">
+              <div class="col-12">
+                <label for="zip" class="form-label"> <strong>Initial Cost:</strong></label>
+                <input type="text" class="form-control w-25" id="initial_cost" placeholder="" required>
+                <div class="invalid-feedback">
+                  Initial cost required.
+                </div>
+              </div>
+            </div>
+
+
+            <hr class="my-4">
+            <p><u>Input expenses incurred</u></p>
+            <!-- Add expenses incurred -->
+            <div class="row justify-content-center">
+              <div class="col-8 form_expenses_incurred">
+
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                  <label class="form-check-label" for="flexRadioDefault1">
+                    Plus cost
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
+                  <label class="form-check-label" for="flexRadioDefault2">
+                    Minus cost
+                  </label>
+                </div>
+                <div class="row">
+                  <div class="col-12">
+                    <label for="desciption" class="form-label">Description<span
+                        class="text-muted"></span></label>
+                    <input type="text" class="form-control" id="address" placeholder="..." required>
+                    <div class="invalid-feedback">
+                      Please enter your shipping address.
+                    </div>
+                  </div>
+
+                  <div class="col-sm-6">
+                    <label for="firstName" class="form-label">Quantity</label>
+                    <input type="text" class="form-control" id="firstName" placeholder="" value="" required>
+                    <div class="invalid-feedback">
+                      Valid number is required.
+                    </div>
+                  </div>
+
+                  <div class="col-sm-6">
+                    <label for="lastName" class="form-label">Price</label>
+                    <input type="text" class="form-control" id="lastName" placeholder="" value="" required>
+                    <div class="invalid-feedback">
+                      Valid price is required.
+                    </div>
+                  </div>
+
+
+                  <div class="col-sm-12 div_additional_cost_button">
+                    <button class="btn btn-primary btn-lg float-end " type="submit">Add</button>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+            <!-- End add expenses incurred -->
+
+            <hr class="my-4">
+
+            <button class="btn btn-primary btn-lg float-end" type="submit">Calculator</button>
+          </form>
+        </div>
+      </div> <!-- Midle side-->
+
+      <!-- Right side-->
+      <div class="col-md-4 col-lg-4 vh-100">
+        <div class="position-sticky right_panel">
+            <div class="summary_table">
+            <table class="table">
+              <thead>
+                <tr>
+                  <th scope="col">#</th>
+                  <th scope="col">Reasion</th>
+                  <th scope="col">Inc/Dec</th>
+                  <th scope="col">Cost</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr class="plus_row">
+                  <th scope="row">1</th>
+                  <td>Have many trees</td>
+                  <td>Inc</td>
+                  <td>100</td>
+                </tr>
+                <tr class="minus_row">
+                  <th scope="row">2</th>
+                  <td>damaged ceiling</td>
+                  <td>Dec</td>
+                  <td>10</td>
+                </tr>
+              </tbody>
+            </table>
+            <hr class="my-4">
+
+
+
+
+          </div>
+        </div>
+      </div> <!-- Right side-->
+
+    </div>
+  </div>
+
+</body>
+
+</html>
