@@ -101,6 +101,7 @@ body {
 /* ================== */
 
 .wrapper {
+    width: 80%;
 }
 
 .sign_out_in_button {
