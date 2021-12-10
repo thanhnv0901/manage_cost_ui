@@ -101,14 +101,19 @@ body {
 /* ================== */
 
 .wrapper {
-    overflow: scroll;
 }
+
 .sign_out_in_button {
     float: right;
 }
 
 .left_menu {
     top: 48px;
+}
+
+.left_menu > div > button {
+    float: right;
+    margin-top: 15px;
 }
 
 .midle_base_info {

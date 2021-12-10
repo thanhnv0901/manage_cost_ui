@@ -11,6 +11,8 @@
   <link href="../assets/bootstrap-5.0.2-dist/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="manage_page.css">
   <script src="manage_page.js"></script>
+  <link href="../assets/css/all.css" rel="stylesheet">
+  <!--load all styles -->
 </head>
 
 <body>
@@ -30,11 +32,11 @@
   </header>
 
 
-  <div class="container-fluid h-100 wrapper">
+  <div class="container-fluid">
     <div class="row">
       <!-- Left side-->
-      <div class="col-md-3 col-lg-2 vh-100 border-end">
-        <div class="position-sticky  left_menu">
+      <div class="col-md-3 col-lg-2">
+        <div class="position-sticky left_menu">
           <div class="d-flex text-muted pt-3">
             <svg class="bd-placeholder-img flex-shrink-0 me-2 rounded" width="32" height="32"
               xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 32x32"
@@ -43,7 +45,7 @@
               <rect width="100%" height="100%" fill="#e83e8c" /><text x="50%" y="50%" fill="#e83e8c"
                 dy=".3em">32x32</text>
             </svg>
-            <p class="pb-3 mb-0 small lh-sm border-bottom">
+            <p class="pb-3 mb-0 small lh-sm border-bottom vw-100">
               <strong class="d-block text-gray-dark">First House</strong>
               Brief Introduction
             </p>
@@ -56,7 +58,7 @@
               <rect width="100%" height="100%" fill="#e83e8c" /><text x="50%" y="50%" fill="#e83e8c"
                 dy=".3em">32x32</text>
             </svg>
-            <p class="pb-3 mb-0 small lh-sm border-bottom">
+            <p class="pb-3 mb-0 small lh-sm border-bottom vw-100">
               <strong class="d-block text-gray-dark">Second House</strong>
               Brief Introduction
             </p>
@@ -69,16 +71,19 @@
               <rect width="100%" height="100%" fill="#e83e8c" /><text x="50%" y="50%" fill="#e83e8c"
                 dy=".3em">32x32</text>
             </svg>
-            <p class="pb-3 mb-0 small lh-sm border-bottom">
+            <p class="pb-3 mb-0 small lh-sm border-bottom vw-100">
               <strong class="d-block text-gray-dark">Third House</strong>
               Brief Introduction
             </p>
+          </div>
+          <div>
+            <button type="button" class="btn btn-secondary"><i class="fas fa-plus"></i></button>
           </div>
         </div>
       </div> <!-- Left side-->
 
       <!-- Midle side-->
-      <div class="col-md-5 col-lg-5 border-end vh-100">
+      <div class="col-md-5 col-lg-5 ">
         <div class="midle_base_info">
           <form class="needs-validation" novalidate>
             <div class="row g-3">
@@ -184,8 +189,7 @@
                 </div>
                 <div class="row">
                   <div class="col-12">
-                    <label for="desciption" class="form-label">Description<span
-                        class="text-muted"></span></label>
+                    <label for="desciption" class="form-label">Description<span class="text-muted"></span></label>
                     <input type="text" class="form-control" id="address" placeholder="..." required>
                     <div class="invalid-feedback">
                       Please enter your shipping address.
@@ -228,7 +232,7 @@
       <!-- Right side-->
       <div class="col-md-4 col-lg-4 vh-100">
         <div class="position-sticky right_panel">
-            <div class="summary_table">
+          <div class="summary_table">
             <table class="table">
               <thead>
                 <tr>
@@ -256,7 +260,49 @@
             <hr class="my-4">
 
 
+            <p><u>Summary Results</u></p>
+            <!-- Summary Results -->
+            <div class="row justify-content-center">
+              <div class="col-8 form_expenses_incurred">
 
+                <div class="row">
+                  <div class="col-12">
+                    <label for="desciption" class="form-label">Initial Cost<span class="text-muted"></span></label>
+                    <input type="text" class="form-control" id="address" placeholder="..." required>
+                    <div class="invalid-feedback">
+                      Please enter your shipping address.
+                    </div>
+                  </div>
+
+                  <div class="col-sm-6">
+                    <label for="firstName" class="form-label">Total cost was added</label>
+                    <input type="text" class="form-control" id="firstName" placeholder="" value="" required>
+                    <div class="invalid-feedback">
+                      Valid number is required.
+                    </div>
+                  </div>
+
+                  <div class="col-sm-6">
+                    <label for="lastName" class="form-label">Total value was added</label>
+                    <input type="text" class="form-control" id="lastName" placeholder="" value="" required>
+                    <div class="invalid-feedback">
+                      Valid price is required.
+                    </div>
+                  </div>
+
+
+                  <div class="col-12">
+                    <label for="desciption" class="form-label">Final Price<span class="text-muted"></span></label>
+                    <input type="text" class="form-control" id="final_price_output" placeholder="..." required>
+                    <div class="invalid-feedback">
+                      Please enter your shipping address.
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+            <!--End Summary Results-->
 
           </div>
         </div>
