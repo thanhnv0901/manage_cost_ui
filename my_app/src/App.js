@@ -2,23 +2,21 @@ import './App.css';
 import Header from './components/header/Header';
 import { Fragment } from 'react';
 import Warp from './components/layout/Warp';
-import LeftColumn from './components/Calculate/LeftColumn';
 import { Routes, Route } from 'react-router-dom'
+import CalculatePage from './pages/CalculatePage';
 
 
 function App() {
   return (
     <Fragment>
-      <Header></Header>
       <Warp>
         <Routes>
-          <Route path='/'>
-            <LeftColumn></LeftColumn>
+          {/* <Route path='/' element={<Header />} /> */}
+          <Route path='/' element={<CalculatePage />} />
 
-          </Route>
+
         </Routes>
       </Warp>
-
     </Fragment>
   );
 }
