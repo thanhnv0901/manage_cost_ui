@@ -1,0 +1,8 @@
+
+.initial_cost_div{
+    margin-top: 15px;
+}
+
+.initial_cost_div > input {
+    display: inline-block;
+}

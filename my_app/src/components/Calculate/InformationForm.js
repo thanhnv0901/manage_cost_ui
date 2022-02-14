@@ -1,4 +1,5 @@
 import IncurredForm from "./IncurredForm";
+import classes from './InformationForm.module.css'
 
 
 const InformationForm = (props) => {
@@ -76,7 +77,7 @@ const InformationForm = (props) => {
                 </div>
             </div>
 
-            <div className="row initial_cost_div">
+            <div className={`row ${classes.initial_cost_div}`}>
                 <div className="col-12">
                     <label for="zip" className="form-label"> <strong>Initial Cost:</strong></label>
                     <input type="text" className="form-control w-25" id="initial_cost" placeholder="" required />
