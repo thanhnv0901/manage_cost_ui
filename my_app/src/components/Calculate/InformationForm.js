@@ -57,24 +57,6 @@ const InformationForm = (props) => {
                     </div>
                 </div>
 
-                <div className="col-xl-4">
-                    <label for="state" className="form-label">State<span className="text-muted">(Optional)</span></label>
-                    <select className="form-select" id="state" required>
-                        <option value="">Choose...</option>
-                        <option>California</option>
-                    </select>
-                    <div className="invalid-feedback">
-                        Please provide a valid state.
-                    </div>
-                </div>
-
-                <div className="col-xl-3">
-                    <label for="zip" className="form-label">Zip<span className="text-muted">(Optional)</span></label>
-                    <input type="text" className="form-control" id="zip" placeholder="" required />
-                    <div className="invalid-feedback">
-                        Zip code required.
-                    </div>
-                </div>
             </div>
 
             <div className={`row ${classes.initial_cost_div}`}>
