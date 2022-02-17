@@ -6,6 +6,15 @@ const InformationForm = (props) => {
     return (
         <form className="needs-validation" >
             <div className="row g-3">
+
+                <div className="col-12">
+                    <label for="phone" className="form-label">Project Name</label>
+                    <input type="text" className="form-control" id="project_name" placeholder="name" />
+                    <div className="invalid-feedback">
+                        Please enter a valid phone address for shipping updates.
+                    </div>
+                </div>
+
                 <div className="col-sm-6">
                     <label for="firstName" className="form-label">First name</label>
                     <input type="text" className="form-control" id="firstName" placeholder="" value="" required />

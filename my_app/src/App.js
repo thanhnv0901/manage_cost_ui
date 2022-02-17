@@ -12,7 +12,7 @@ function App() {
       <Warp>
         <Routes>
           {/* <Route path='/' element={<Header />} /> */}
-          <Route path='/' element={<CalculatePage />} />
+          <Route path='/projects/*' element={<CalculatePage />} />
 
 
         </Routes>
