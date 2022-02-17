@@ -15,6 +15,12 @@ const InformationForm = (props) => {
     // notice convert para to int to compare
     let project = projectInformation.find((obj) => obj.id == projectID)
 
+    const saveHandler = (event)=>{
+        event.preventDefault();
+
+        
+    }
+
     return (
         <form className="needs-validation" >
             <div className="row g-3">
@@ -91,7 +97,7 @@ const InformationForm = (props) => {
             {/* <!-- End add expenses incurred --> */}
             <hr className="my-4" />
 
-            <button className="btn btn-primary btn-lg float-end" type="submit">Save</button>
+            <button className="btn btn-primary btn-lg float-end" type="submit" onClick={saveHandler}>Save</button>
 
         </form>
     )
