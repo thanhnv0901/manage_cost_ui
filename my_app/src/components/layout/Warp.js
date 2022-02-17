@@ -11,8 +11,8 @@ const Warp = (props) => {
 
         <Fragment>
             <Header></Header>
-            <div class={`container-fluid ${classes.wrapper}`}>
-                <div class="row">
+            <div className={`container-fluid ${classes.wrapper}`}>
+                <div className="row">
                     {props.children}
                 </div>
             </div>

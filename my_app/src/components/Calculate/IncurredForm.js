@@ -3,7 +3,7 @@ import classes from './CenterColumn.module.css'
 
 const IncurredForm = (props) => {
     return (
-        <form>
+        <div>
             <div className="row justify-content-center">
                 <div className={`col-8 ${classes.form_expenses_incurred}`}>
 
@@ -52,7 +52,7 @@ const IncurredForm = (props) => {
 
                 </div>
             </div>
-        </form>
+        </div>
     )
 }
 

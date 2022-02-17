@@ -1,39 +1,44 @@
 import IncurredForm from "./IncurredForm";
-import classes from './InformationForm.module.css'
+import classes from './InformationForm.module.css';
+import { useParams } from "react-router-dom";
+import { useSelector, useDispatch } from 'react-redux';
+
+
 
 
 const InformationForm = (props) => {
+
+    let params = useParams();
+    let projectID = params.id
+
+    const projectInformation = useSelector((state) => state.informations.projects)
+    // notice convert para to int to compare
+    let project = projectInformation.find((obj) => obj.id == projectID)
+
     return (
         <form className="needs-validation" >
             <div className="row g-3">
 
                 <div className="col-12">
                     <label for="phone" className="form-label">Project Name</label>
-                    <input type="text" className="form-control" id="project_name" placeholder="name" />
+                    <input type="text" className="form-control" id="project_name" placeholder="name" value={project.projectName} />
                     <div className="invalid-feedback">
                         Please enter a valid phone address for shipping updates.
                     </div>
                 </div>
 
                 <div className="col-sm-6">
-                    <label for="firstName" className="form-label">First name</label>
-                    <input type="text" className="form-control" id="firstName" placeholder="" value="" required />
+                    <label for="firstName" className="form-label">Owner name</label>
+                    <input type="text" className="form-control" id="firstName" placeholder="" value={project.ownerName} required />
                     <div className="invalid-feedback">
                         Valid first name is required.
                     </div>
                 </div>
 
-                <div className="col-sm-6">
-                    <label for="lastName" className="form-label">Last name</label>
-                    <input type="text" className="form-control" id="lastName" placeholder="" value="" required />
-                    <div className="invalid-feedback">
-                        Valid last name is required.
-                    </div>
-                </div>
 
                 <div className="col-12">
                     <label for="phone" className="form-label">Phone <span className="text-muted">(Optional)</span></label>
-                    <input type="text" className="form-control" id="phone_input" placeholder="097xxxxxxxx" />
+                    <input type="text" className="form-control" id="phone_input" placeholder="097xxxxxxxx" value={project.phone} />
                     <div className="invalid-feedback">
                         Please enter a valid phone address for shipping updates.
                     </div>
@@ -41,7 +46,7 @@ const InformationForm = (props) => {
 
                 <div className="col-12">
                     <label for="email" className="form-label">Email <span className="text-muted">(Optional)</span></label>
-                    <input type="email" className="form-control" id="email" placeholder="you@example.com" />
+                    <input type="email" className="form-control" id="email" placeholder="you@example.com" value={project.email} />
                     <div className="invalid-feedback">
                         Please enter a valid email address for shipping updates.
                     </div>
@@ -49,7 +54,7 @@ const InformationForm = (props) => {
 
                 <div className="col-12">
                     <label for="address" className="form-label">Address<span className="text-muted">(Optional)</span></label>
-                    <input type="text" className="form-control" id="address" placeholder="1234 Main St" required />
+                    <input type="text" className="form-control" id="address" placeholder="1234 Main St" required value={project.address} />
                     <div className="invalid-feedback">
                         Please enter your shipping address.
                     </div>
@@ -57,7 +62,7 @@ const InformationForm = (props) => {
 
                 <div className="col-xl-5">
                     <label for="country" className="form-label">Country<span className="text-muted">(Optional)</span></label>
-                    <select className="form-select" id="country" required>
+                    <select className="form-select" id="country" required value={project.country}>
                         <option value="">Choose...</option>
                         <option>United States</option>
                     </select>

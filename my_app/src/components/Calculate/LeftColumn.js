@@ -7,24 +7,30 @@ import './LeftColumn.css';
 import ProjectCard from './ProjectCard';
 import { useDispatch, useSelector } from 'react-redux';
 import { informationActions } from '../../stores/information-slice';
+import { Link, useNavigate, useLocation } from 'react-router-dom';
 
 const LeftColumn = (props) => {
 
     const dispatch = useDispatch();
-    const projectCards = useSelector((state)=> state.informations.projects)
+    const navigate = useNavigate();
 
-    const onClickHandler = ()=>{
-        dispatch(informationActions.addProject({
-        }))
+
+    const projectCards = useSelector((state) => state.informations.projects)
+    const counter = useSelector((state) => state.informations.counter)
+
+    const onClickHandler = () => {
+        dispatch(informationActions.addProject())
+        navigate(`${counter}`)
     }
 
     return (
         <Fragment>
             <div className="col-md-3 col-lg-2">
                 <div className="position-sticky left_menu">
-                    {/* note: example for ui test */}
-                    {projectCards.map((project)=>(
-                        <ProjectCard key={project.id} name={project.projectName} description={project.address}></ProjectCard>
+                    {projectCards.map((project) => (
+                        <Link key={project.id} to={`${project.id}`}>
+                            <ProjectCard name={project.projectName} description={project.address}></ProjectCard>
+                        </Link>
                     ))}
 
                     <div>

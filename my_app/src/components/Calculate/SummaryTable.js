@@ -6,7 +6,7 @@ import classes from './SummaryTable.module.css'
 const SummaryTable = (prop) => {
 
     return (
-        <table class="table">
+        <table className="table">
             <thead>
                 <tr>
                     <th scope="col">#</th>
@@ -28,7 +28,7 @@ const SummaryTable = (prop) => {
 
 const SummaryCell = (props) => {
     return (
-        <tr class={props.isPlus ? classes.plus_row : classes.minus_row}>
+        <tr className={props.isPlus ? classes.plus_row : classes.minus_row}>
             <th scope="row">{props.id}</th>
             <td>{props.detail}</td>
             <td>{props.isPlus ? 'Inc' : 'Dec'}</td>

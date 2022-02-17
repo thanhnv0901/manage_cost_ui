@@ -4,7 +4,7 @@ import classes from 'SummaryTable.module.css'
 const SummaryCell = (props) => {
     return (
         <Fragment>
-            <tr class={classes.rf}>
+            <tr className={classes.rf}>
                 <th scope="row">1</th>
                 <td>Have many trees</td>
                 <td>Inc</td>
