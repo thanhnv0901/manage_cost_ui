@@ -9,6 +9,15 @@ import { useDispatch, useSelector } from 'react-redux';
 import { informationActions } from '../../stores/information-slice';
 import { Link, useNavigate, NavLink } from 'react-router-dom';
 
+
+
+const assignClassToLinkActive = (isActive)=>{
+    const linkClasses = ["aed"];
+    if (isActive) linkClasses.push("activefrf");
+
+    return linkClasses.join(" "); // returns "registerButton" or "registerButton active"
+}
+
 const LeftColumn = (props) => {
 
     const dispatch = useDispatch();
@@ -28,9 +37,8 @@ const LeftColumn = (props) => {
             <div className="col-md-3 col-lg-2">
                 <div className="position-sticky left_menu">
                     {projectCards.map((project) => (
-                        <NavLink key={project.id} to={`${project.id}`} activeClassName="selected" className={isActive  =>
-                            (isActive ? "selected" : "")
-                        }>
+                        <NavLink key={project.id} to={`${project.id}`}
+                            className={assignClassToLinkActive} >
                             <ProjectCard name={project.projectName} description={project.address}></ProjectCard>
                         </NavLink>
                     ))}

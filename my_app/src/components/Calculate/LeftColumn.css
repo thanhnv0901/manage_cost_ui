@@ -9,6 +9,6 @@
     margin-top: 15px;
 }
 
-.selected > div{
+.actived {
     background-color: #cff9f0 !important
 }
