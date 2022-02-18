@@ -10,7 +10,7 @@ const ProjectCard = (props) => {
                 <rect width="100%" height="100%" fill="#e83e8c" /><text x="50%" y="50%" fill="#e83e8c"
                     dy=".3em">32x32</text>
             </svg>
-            <p className="pb-3 mb-0 small lh-sm border-bottom vw-100">
+            <p className=" mb-0 small lh-sm border-bottom vw-100">
                 <strong className="d-block text-gray-dark">{props.name}</strong>
                 {props.description}
             </p>

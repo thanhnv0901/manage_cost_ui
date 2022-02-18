@@ -10,7 +10,8 @@ const informationSlice = createSlice({
             phone: "090098621",
             email: "jary@gmail.com",
             address: "Sysney",
-            country: "Malben"
+            country: "Malben",
+            initialCost: 0
 
         }],
         counter: 1 // notice,
@@ -25,7 +26,8 @@ const informationSlice = createSlice({
                 phone: "",
                 email: "",
                 address: "",
-                country: ""
+                country: "",
+                initialCost: 0,
             })
 
             state.counter++;
@@ -43,6 +45,7 @@ const informationSlice = createSlice({
             project.email = action.payload.email
             project.address = action.payload.address
             project.country = action.payload.country
+            project.initialCost = action.payload.initialCost
 
         }
     }

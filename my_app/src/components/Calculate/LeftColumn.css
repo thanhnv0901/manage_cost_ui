@@ -9,6 +9,6 @@
     margin-top: 15px;
 }
 
-.actived {
+.selectedProject > div{
     background-color: #cff9f0 !important
 }

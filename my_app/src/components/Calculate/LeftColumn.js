@@ -11,12 +11,7 @@ import { Link, useNavigate, NavLink } from 'react-router-dom';
 
 
 
-const assignClassToLinkActive = (isActive)=>{
-    const linkClasses = ["aed"];
-    if (isActive) linkClasses.push("activefrf");
 
-    return linkClasses.join(" "); // returns "registerButton" or "registerButton active"
-}
 
 const LeftColumn = (props) => {
 
@@ -38,7 +33,9 @@ const LeftColumn = (props) => {
                 <div className="position-sticky left_menu">
                     {projectCards.map((project) => (
                         <NavLink key={project.id} to={`${project.id}`}
-                            className={assignClassToLinkActive} >
+                            className={({ isActive }) =>
+                                isActive ? "selectedProject" : undefined
+                            } >
                             <ProjectCard name={project.projectName} description={project.address}></ProjectCard>
                         </NavLink>
                     ))}
