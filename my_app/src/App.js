@@ -12,7 +12,7 @@ function App() {
     <Fragment>
       <Warp>
         <Routes>
-          <Route path='/' element={<Navigate to="/projects" />}></Route>
+          <Route path='/*' element={<Navigate to="/projects" />}></Route>
           <Route path='/projects' element={<CalculatePage />}>
             <Route path=":id" element={
               <Fragment>

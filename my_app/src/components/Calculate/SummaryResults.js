@@ -11,7 +11,7 @@ const SummaryResults = (props) => {
 
                     <div className="row">
                         <div className="col-12">
-                            <label  for="desciption" className="form-label">Initial Cost<span className="text-muted"></span></label>
+                            <label  htmlFor="desciption" className="form-label">Initial Cost<span className="text-muted"></span></label>
                             <input disabled type="text" className="form-control" id="address" placeholder="..." required />
                             <div className="invalid-feedback">
                                 Please enter your shipping address.
@@ -19,7 +19,7 @@ const SummaryResults = (props) => {
                         </div>
 
                         <div className="col-sm-6">
-                            <label for="firstName" className="form-label">Total cost was added</label>
+                            <label htmlFor="firstName" className="form-label">Total cost was added</label>
                             <input disabled type="text" className="form-control" id="firstName" placeholder="" value="" required />
                             <div className="invalid-feedback">
                                 Valid number is required.
@@ -27,7 +27,7 @@ const SummaryResults = (props) => {
                         </div>
 
                         <div className="col-sm-6">
-                            <label for="lastName" className="form-label">Total value was added</label>
+                            <label htmlFor="lastName" className="form-label">Total value was added</label>
                             <input disabled type="text" className="form-control" id="lastName" placeholder="" value="" required />
                             <div className="invalid-feedback">``
                                 Valid price is required.
@@ -36,7 +36,7 @@ const SummaryResults = (props) => {
 
 
                         <div className="col-12">
-                            <label for="desciption" className="form-label">Final Price<span className="text-muted"></span></label>
+                            <label htmlFor="desciption" className="form-label">Final Price<span className="text-muted"></span></label>
                             <input disabled type="text" className="form-control" id="final_price_output" placeholder="..." required />
                             <div className="invalid-feedback">
                                 Please enter your shipping address.

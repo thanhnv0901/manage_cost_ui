@@ -7,7 +7,7 @@ import './LeftColumn.css';
 import ProjectCard from './ProjectCard';
 import { useDispatch, useSelector } from 'react-redux';
 import { informationActions } from '../../stores/information-slice';
-import { Link, useNavigate, useLocation } from 'react-router-dom';
+import { Link, useNavigate, NavLink } from 'react-router-dom';
 
 const LeftColumn = (props) => {
 
@@ -28,9 +28,11 @@ const LeftColumn = (props) => {
             <div className="col-md-3 col-lg-2">
                 <div className="position-sticky left_menu">
                     {projectCards.map((project) => (
-                        <Link key={project.id} to={`${project.id}`}>
+                        <NavLink key={project.id} to={`${project.id}`} activeClassName="selected" className={isActive  =>
+                            (isActive ? "selected" : "")
+                        }>
                             <ProjectCard name={project.projectName} description={project.address}></ProjectCard>
-                        </Link>
+                        </NavLink>
                     ))}
 
                     <div>
