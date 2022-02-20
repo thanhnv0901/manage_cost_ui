@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/manage_cost_ui/my_app/static/css/main.843ed466.css",
-    "main.js": "/manage_cost_ui/my_app/static/js/main.34d3c3ed.js",
-    "static/js/787.28cb0dcd.chunk.js": "/manage_cost_ui/my_app/static/js/787.28cb0dcd.chunk.js",
-    "index.html": "/manage_cost_ui/my_app/index.html",
-    "main.843ed466.css.map": "/manage_cost_ui/my_app/static/css/main.843ed466.css.map",
-    "main.34d3c3ed.js.map": "/manage_cost_ui/my_app/static/js/main.34d3c3ed.js.map",
-    "787.28cb0dcd.chunk.js.map": "/manage_cost_ui/my_app/static/js/787.28cb0dcd.chunk.js.map"
+    "main.css": "/manage_cost_ui/static/css/main.843ed466.css",
+    "main.js": "/manage_cost_ui/static/js/main.082fd715.js",
+    "static/js/787.28cb0dcd.chunk.js": "/manage_cost_ui/static/js/787.28cb0dcd.chunk.js",
+    "index.html": "/manage_cost_ui/index.html",
+    "main.843ed466.css.map": "/manage_cost_ui/static/css/main.843ed466.css.map",
+    "main.082fd715.js.map": "/manage_cost_ui/static/js/main.082fd715.js.map",
+    "787.28cb0dcd.chunk.js.map": "/manage_cost_ui/static/js/787.28cb0dcd.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.843ed466.css",
-    "static/js/main.34d3c3ed.js"
+    "static/js/main.082fd715.js"
   ]
 }
