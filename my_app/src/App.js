@@ -5,7 +5,6 @@ import Warp from './components/layout/Warp';
 import { Routes, Route, Navigate } from 'react-router-dom'
 import CalculatePage from './pages/CalculatePage';
 import CenterColumn from './components/Calculate/CenterColumn.js'
-import RightColumn from './components/Calculate/RightColumn.js'
 
 function App() {
   return (
@@ -17,7 +16,6 @@ function App() {
             <Route path=":id" element={
               <Fragment>
                 <CenterColumn></CenterColumn>
-                <RightColumn></RightColumn>
               </Fragment>
             }>
             </Route>

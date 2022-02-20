@@ -10,16 +10,16 @@ import { useEffect } from "react";
 
 const InformationForm = (props) => {
 
-    const navigate = useNavigate();
+    // const navigate = useNavigate();
 
-    let params = useParams();
-    let projectID = params.id
+    // let params = useParams();
+    // let projectID = params.id
 
     const dispatch = useDispatch();
 
-    const projectInformation = useSelector((state) => state.informations.projects)
-    // notice convert param to int to compare
-    let project = projectInformation.find((obj) => obj.id == projectID)
+    // const projectInformation = useSelector((state) => state.informations.projects)
+    // // notice convert param to int to compare
+    // let project = projectInformation.find((obj) => obj.id == projectID)
 
     const saveHandler = (event) => {
         event.preventDefault();
@@ -37,12 +37,11 @@ const InformationForm = (props) => {
         ))
     }
 
+    let project = props.project
 
     useEffect(() => {
 
-        if (!project) {
-            navigate('/projects')
-        } else {
+       
 
             setCurrentProjectName(project.projectName)
             setCurrentOwnerName(project.ownerName)
@@ -51,7 +50,6 @@ const InformationForm = (props) => {
             setCurrentAddress(project.address)
             setCurrentCountry(project.country)
             setCurrentInitialCost(project.initialCost)
-        }
 
     }, [project && project.id]);
 
@@ -138,7 +136,7 @@ const InformationForm = (props) => {
             <p><u>Input expenses incurred</u></p>
 
             {/* <!-- Add expenses incurred --> */}
-            <IncurredForm projectID={projectID}></IncurredForm>
+            <IncurredForm projectID={project.id}></IncurredForm>
             {/* <!-- End add expenses incurred --> */}
             <hr className="my-4" />
 

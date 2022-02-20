@@ -5,19 +5,33 @@ import classes from './SummaryTable.module.css'
 import SummaryResults from './SummaryResults';
 import { useSelector, useDispatch } from 'react-redux';
 import { useParams, useNavigate, Redirect } from "react-router-dom";
-
+import { useEffect } from "react";
 
 
 
 const SummaryTable = (prop) => {
+    const navigate = useNavigate();
+
 
     let params = useParams();
-    let projectID = params.id
+    // let projectID = params.id
 
-    const projectInformation = useSelector((state) => state.informations.projects)
-    let project = projectInformation.find((obj) => obj.id == projectID)
-    let costDetails = project.costDetails
+    // const projectInformation = useSelector((state) => state.informations.projects)
+    // let project = projectInformation.find((obj) => obj.id == projectID)
+   
+    let project = prop.project
 
+
+    let costDetails = project ? project.costDetails : []
+    console.log(costDetails)
+
+    // useEffect(() => {
+
+    //     if (!project) {
+    //         navigate('/projects')
+    //     }
+
+    // }, [project && project.id]);
 
     return (
         <Fragment>
@@ -37,7 +51,7 @@ const SummaryTable = (prop) => {
                 </tbody>
             </table>
             <hr className="my-4" />
-            <SummaryResults projectInfo={project}></SummaryResults>
+            {project && <SummaryResults projectInfo={project}></SummaryResults>}
         </Fragment>
     )
 }

@@ -13,7 +13,7 @@ const IncurredForm = (props) => {
     const dispatch = useDispatch();
 
 
-    const { value: description, valueChangeHandler: descriptionChange } = useInput("")
+    const { value: reason, valueChangeHandler: reasonChange } = useInput("")
     const { value: quantiy, valueChangeHandler: quantityChange } = useInput("")
     const { value: price, valueChangeHandler: priceChange } = useInput("")
 
@@ -24,7 +24,7 @@ const IncurredForm = (props) => {
         dispatch(informationActions.addDetailCost(
             {
                 id: props.projectID,
-                reason: description,
+                reason: reason,
                 isPlus: plusState,
                 price: price,
                 quantiy:quantiy
@@ -56,8 +56,8 @@ const IncurredForm = (props) => {
                     </div>
                     <div className="row">
                         <div className="col-12">
-                            <label htmlFor="desciption" className="form-label">Description<span className="text-muted"></span></label>
-                            <input type="text" className="form-control" id="address" value={description} onChange={descriptionChange}  />
+                            <label htmlFor="desciption" className="form-label">Reason<span className="text-muted"></span></label>
+                            <input type="text" className="form-control" id="address" value={reason} onChange={reasonChange}  />
                             <div className="invalid-feedback">
                                 Please enter your shipping address.
                             </div>

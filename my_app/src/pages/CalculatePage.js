@@ -7,11 +7,12 @@ const CalculatePage = (prop) => {
 
 
     return (<Fragment>
-
-        <LeftColumn />
-        <Outlet />
-
-
+        <div className="col-md-3 col-lg-2">
+            <LeftColumn />
+        </div>
+        <div className="col-md-9 col-lg-10">
+            <Outlet />
+        </div>
     </Fragment>)
 
 }
