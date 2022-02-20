@@ -11,7 +11,19 @@ const informationSlice = createSlice({
             email: "jary@gmail.com",
             address: "Sysney",
             country: "Malben",
-            initialCost: 0
+            initialCost: 1000,
+            costDetails: [
+                {
+                    reason: "Have many trees",
+                    isPlus: true,
+                    cost: 100
+                },
+                {
+                    reason: "Have many trees",
+                    isPlus: false,
+                    cost: 200
+                }
+            ]
 
         }],
         counter: 1 // notice,
@@ -28,6 +40,7 @@ const informationSlice = createSlice({
                 address: "",
                 country: "",
                 initialCost: 0,
+                costDetails: []
             })
 
             state.counter++;
@@ -45,7 +58,23 @@ const informationSlice = createSlice({
             project.email = action.payload.email
             project.address = action.payload.address
             project.country = action.payload.country
-            project.initialCost = action.payload.initialCost
+            project.initialCost = parseFloat(action.payload.initialCost)
+
+        },
+        addDetailCost(state, action) {
+            let projectID = action.payload.id
+
+
+            let project = state.projects.find((obj) => {
+                return obj.id == projectID
+            }) || {}
+
+
+            project.costDetails.push({
+                reason: action.payload.reason,
+                isPlus: action.payload.isPlus,
+                cost: parseFloat(action.payload.quantiy) * parseFloat(action.payload.price)
+            })
 
         }
     }

@@ -1,6 +1,5 @@
 import { Fragment } from 'react'
 import { SummaryTable } from './SummaryTable';
-import SummaryResults from './SummaryResults';
 
 const RightColumn = (props) => {
 
@@ -12,8 +11,6 @@ const RightColumn = (props) => {
         <div className="position-sticky right_panel">
           <div className="summary_table">
             <SummaryTable></SummaryTable>
-            <hr className="my-4" />
-            <SummaryResults></SummaryResults>
           </div>
         </div>
       </div>

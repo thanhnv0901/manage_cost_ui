@@ -31,7 +31,8 @@ const InformationForm = (props) => {
                 phone: phone,
                 email: phone,
                 address: address,
-                country: country
+                country: country,
+                initialCost: initialCost
             }
         ))
     }
@@ -61,7 +62,7 @@ const InformationForm = (props) => {
     const { value: email, setCurrentValueHandler: setCurrentEmail, valueChangeHandler: emailChange } = useInput("")
     const { value: address, setCurrentValueHandler: setCurrentAddress, valueChangeHandler: addressChange } = useInput("")
     const { value: country, setCurrentValueHandler: setCurrentCountry, valueChangeHandler: countryChange } = useInput("")
-    const { value: initialCost, setCurrentValueHandler: setCurrentInitialCost, valueChangeHandler: countryInitialCost } = useInput("")
+    const { value: initialCost, setCurrentValueHandler: setCurrentInitialCost, valueChangeHandler: initialCostChange } = useInput(0)
 
     return (
         <form className="needs-validation" >
@@ -126,7 +127,7 @@ const InformationForm = (props) => {
             <div className={`row ${classes.initial_cost_div}`}>
                 <div className="col-12">
                     <label htmlFor="zip" className="form-label"> <strong>Initial Cost ($):</strong></label>
-                    <input type="text" className="form-control w-25" id="initial_cost" placeholder="" value={initialCost} onChange={countryInitialCost} required />
+                    <input type="text" className="form-control w-25" id="initial_cost" placeholder="" value={initialCost} onChange={initialCostChange} required />
                     <div className="invalid-feedback">
                         Initial cost required.
                     </div>
@@ -137,7 +138,7 @@ const InformationForm = (props) => {
             <p><u>Input expenses incurred</u></p>
 
             {/* <!-- Add expenses incurred --> */}
-            <IncurredForm></IncurredForm>
+            <IncurredForm projectID={projectID}></IncurredForm>
             {/* <!-- End add expenses incurred --> */}
             <hr className="my-4" />
 
