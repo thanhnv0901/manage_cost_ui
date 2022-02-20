@@ -26,13 +26,13 @@ const informationSlice = createSlice({
             ]
 
         }],
-        counter: 1 // notice,
+        keyCounter: 1 // notice,
     },
     reducers: {
         addProject(state, action) {
 
             state.projects.push({
-                id: state.counter,
+                id: state.keyCounter,
                 projectName: "",
                 ownerName: "",
                 phone: "",
@@ -43,7 +43,7 @@ const informationSlice = createSlice({
                 costDetails: []
             })
 
-            state.counter++;
+            state.keyCounter++;
         },
         updateProject(state, action) {
 
@@ -76,6 +76,17 @@ const informationSlice = createSlice({
                 cost: parseFloat(action.payload.quantiy) * parseFloat(action.payload.price)
             })
 
+        },
+        removeProject(state, action) {
+            let projectID = action.payload.id
+            state.projects = state.projects.filter((obj => obj.id != projectID))
+        },
+        removeDetailCost(state, action) {
+            let projectID = action.payload.id
+            let index = action.payload.detialIndex
+            let project = state.projects.find(obj => obj.id===parseInt(projectID))
+
+            project.costDetails.splice(index,1)
         }
     }
 })

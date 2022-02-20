@@ -1,3 +1,4 @@
+import DeleteProjectCard from "../buttons/DeleteProjectCard";
 
 const ProjectCard = (props) => {
 
@@ -14,6 +15,8 @@ const ProjectCard = (props) => {
                 <strong className="d-block text-gray-dark">{props.name}</strong>
                 {props.description}
             </p>
+            <DeleteProjectCard projectID={props.projectID}></DeleteProjectCard>
+
         </div>
     )
 }

@@ -21,13 +21,13 @@ const SummaryResults = (props) => {
 
     return (
         <Fragment>
-            <p><b>Summary Results</b></p>
+            <p><b>SUMMARY RESULTS</b></p>
             <div className="row justify-content-center">
                 <div className={`col-8 ${classes.form_border}`}>
 
                     <div className="row">
                         <div className="col-12">
-                            <label htmlFor="desciption" className="form-label">Initial Cost<span className="text-muted"></span></label>
+                            <label htmlFor="desciption" className="form-label">Original Cost($)<span className="text-muted"></span></label>
                             <input disabled type="text" className="form-control" id="address" value={initalCost} required />
                             <div className="invalid-feedback">
                                 Please enter your shipping address.

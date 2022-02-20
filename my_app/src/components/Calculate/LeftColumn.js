@@ -11,8 +11,6 @@ import { Fragment, useRef, useEffect } from 'react';
 
 
 
-
-
 const LeftColumn = (props) => {
 
     const dispatch = useDispatch();
@@ -32,7 +30,7 @@ const LeftColumn = (props) => {
 
     useEffect(() => {
         scrollToBottom()
-    }, [projectCards]);
+    }, [counter]);
 
     return (
         <Fragment>
@@ -42,7 +40,7 @@ const LeftColumn = (props) => {
                         className={({ isActive }) =>
                             isActive ? classes.selectedProject : undefined
                         } >
-                        <ProjectCard name={project.projectName} description={project.address}></ProjectCard>
+                        <ProjectCard projectID={project.id} name={project.projectName} description={project.address}></ProjectCard>
                     </NavLink>
                 ))}
                 <div ref={projectEndRef} />

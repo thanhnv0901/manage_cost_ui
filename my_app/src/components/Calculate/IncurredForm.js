@@ -57,7 +57,7 @@ const IncurredForm = (props) => {
                     <div className="row">
                         <div className="col-12">
                             <label htmlFor="desciption" className="form-label">Reason<span className="text-muted"></span></label>
-                            <input type="text" className="form-control" id="address" value={reason} onChange={reasonChange}  />
+                            <input type="text" className="form-control" autoComplete="off"  value={reason} onChange={reasonChange}  />
                             <div className="invalid-feedback">
                                 Please enter your shipping address.
                             </div>
@@ -65,7 +65,7 @@ const IncurredForm = (props) => {
 
                         <div className="col-sm-6">
                             <label htmlFor="firstName" className="form-label">Quantity</label>
-                            <input type="text" className="form-control" id="firstName" value={quantiy} onChange={quantityChange}  />
+                            <input type="text" className="form-control" autoComplete="off"  value={quantiy} onChange={quantityChange}  />
                             <div className="invalid-feedback">
                                 Valid number is required.
                             </div>
@@ -73,7 +73,7 @@ const IncurredForm = (props) => {
 
                         <div className="col-sm-6">
                             <label htmlFor="lastName" className="form-label">Price</label>
-                            <input type="text" className="form-control" id="lastName" value={price} onChange={priceChange}  />
+                            <input type="text" className="form-control" autoComplete="off"  value={price} onChange={priceChange}  />
                             <div className="invalid-feedback">
                                 Valid price is required.
                             </div>
